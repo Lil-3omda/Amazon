@@ -13,6 +13,11 @@ namespace Amazon_API.Repositories
             this.context = context;
         }
 
+        public void Dispose()
+        {
+            context.Dispose();
+        }
+
         public async Task<int> SaveAsync()
         {
             return await context.SaveChangesAsync();
