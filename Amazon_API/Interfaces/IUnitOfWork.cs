@@ -2,7 +2,7 @@
 
 namespace Amazon_API.Interfaces
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         Task<int> SaveAsync();
     }
