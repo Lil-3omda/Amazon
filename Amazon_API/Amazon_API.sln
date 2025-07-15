@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35818.85 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "temp", "temp\temp.csproj", "{B6FD2B78-0688-43D5-A446-C18750308D74}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amazon_API", "Amazon_API\Amazon_API.csproj", "{B6FD2B78-0688-43D5-A446-C18750308D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
