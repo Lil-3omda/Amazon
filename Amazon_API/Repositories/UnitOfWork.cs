@@ -7,11 +7,14 @@ namespace Amazon_API.Repositories
     public class UnitOfWork:IUnitOfWork
     {
         private readonly AppDbContext context;
+        private ICartItemRepository? _cartItemRepository;
 
         public UnitOfWork(AppDbContext context)
         {
             this.context = context;
         }
+        public ICartItemRepository CartItems =>
+    _cartItemRepository ??= new CartItemRepository(context);
 
         public void Dispose()
         {
