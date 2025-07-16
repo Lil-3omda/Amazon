@@ -45,6 +45,8 @@ public class Program
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddScoped<ICartItemService, CartItemService>();
+        builder.Services.AddScoped<IWishListItemService, WishListItemService>();
+
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
         {
