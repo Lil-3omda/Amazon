@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using Microsoft.AspNetCore.Builder;
 
 public class Program
 {
@@ -40,9 +41,13 @@ public class Program
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
 
+        builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<ICartItemService, CartItemService>();
+
+        builder.Services.AddScoped<IEmailService, EmailService>();
+        builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Amazon API", Version = "v1" });
@@ -55,7 +60,6 @@ public class Program
                 Type = SecuritySchemeType.ApiKey,
                 Scheme = "Bearer"
             });
-
             c.AddSecurityRequirement(new OpenApiSecurityRequirement
             {
                 {
@@ -69,9 +73,8 @@ public class Program
                     },
                     new string[] {}
                 }
-           });
+            });
         });
-
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("AllowAll", policy =>
@@ -106,6 +109,7 @@ public class Program
 
         app.UseHttpsRedirection();
         app.UseCors("AllowAll");
+        app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
         app.MapControllers();

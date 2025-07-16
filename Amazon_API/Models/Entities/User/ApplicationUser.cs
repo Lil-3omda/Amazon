@@ -18,6 +18,8 @@ namespace Amazon_API.Models.Entities.User
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
         public DateTime? LastLoginDate { get; set; }
+        public string OtpCode { get; set; }
+        public DateTime? OtpGeneratedAt { get; set; }
 
         public ICollection<Review> Reviews { get; set; } = new List<Review>();
         public ICollection<Product> Products { get; set; } = new List<Product>();
