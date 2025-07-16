@@ -3,6 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+
+# Angular
+Amazon_Angular/node_modules/
+Amazon_Angular/dist/
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -340,6 +346,9 @@ ASALocalRun/
 
 # MSBuild Binary and Structured Log
 *.binlog
+
+# Application configuration
+appsettings.Development.json
 
 # NVidia Nsight GPU debugger configuration file
 *.nvuser
