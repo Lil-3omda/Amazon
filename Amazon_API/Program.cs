@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using AutoMapper;
+using Microsoft.Extensions.DependencyInjection;
 
 public class Program
 {
@@ -26,7 +28,7 @@ public class Program
     private static void ConfigureServices(WebApplicationBuilder builder)
     {
         var configuration = builder.Configuration;
-
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         builder.Services.AddControllers();
 
         builder.Services.AddDbContext<AppDbContext>(options =>
