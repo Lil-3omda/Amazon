@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|d:\\iti\\project-amazon\\project\\amazon\\amazon_api\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|solutionrelative:amazon_api\\controllers\\cartitemcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|d:\\iti\\project-amazon\\project\\amazon\\amazon_api\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|solutionrelative:amazon_api\\services\\cartitemservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|d:\\iti\\project-amazon\\project\\amazon\\amazon_api\\amazon_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|solutionrelative:amazon_api\\amazon_api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|d:\\iti\\project-amazon\\project\\amazon\\amazon_api\\mappings\\cartmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6FD2B78-0688-43D5-A446-C18750308D74}|Amazon_API\\Amazon_API.csproj|solutionrelative:amazon_api\\mappings\\cartmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CartItemService.cs",
+              "DocumentMoniker": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Services\\CartItemService.cs",
+              "RelativeDocumentMoniker": "Amazon_API\\Services\\CartItemService.cs",
+              "ToolTip": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Services\\CartItemService.cs",
+              "RelativeToolTip": "Amazon_API\\Services\\CartItemService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:35:48.349Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Amazon_API.csproj",
+              "DocumentMoniker": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Amazon_API.csproj",
+              "RelativeDocumentMoniker": "Amazon_API\\Amazon_API.csproj",
+              "ToolTip": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Amazon_API.csproj",
+              "RelativeToolTip": "Amazon_API\\Amazon_API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-07-16T15:35:39.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CartMappingProfile.cs",
+              "DocumentMoniker": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Mappings\\CartMappingProfile.cs",
+              "RelativeDocumentMoniker": "Amazon_API\\Mappings\\CartMappingProfile.cs",
+              "ToolTip": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Mappings\\CartMappingProfile.cs",
+              "RelativeToolTip": "Amazon_API\\Mappings\\CartMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:35:27.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartItemController.cs",
+              "DocumentMoniker": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Controllers\\CartItemController.cs",
+              "RelativeDocumentMoniker": "Amazon_API\\Controllers\\CartItemController.cs",
+              "ToolTip": "D:\\ITI\\Project-Amazon\\Project\\Amazon\\Amazon_API\\Controllers\\CartItemController.cs",
+              "RelativeToolTip": "Amazon_API\\Controllers\\CartItemController.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAcwDAAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-16T15:35:24.564Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
