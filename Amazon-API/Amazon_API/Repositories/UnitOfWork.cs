@@ -1,9 +1,9 @@
 using Amazon_API.Data;
 using Amazon_API.Interfaces;
 using Amazon_API.Repositories.ProductRepository;
-using Amazon_API.Repositories.CartRepository;
-using Amazon_API.Repositories.WishlistRepository;
-using Amazon_API.Repositories.OrderRepository;
+//using Amazon_API.Repositories.CartRepository;
+//using Amazon_API.Repositories.WishlistRepository;
+//using Amazon_API.Repositories.OrderRepository;
 
 namespace Amazon_API.Repositories
 {
