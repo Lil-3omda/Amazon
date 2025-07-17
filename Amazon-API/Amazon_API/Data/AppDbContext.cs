@@ -6,6 +6,7 @@ using Amazon_API.Models.Entities.Categories;
 using Amazon_API.Models.Entities.Ordering;
 using Amazon_API.Models.Entities.Products;
 using Amazon_API.Models.Entities.Reviews;
+using Amazon_API.Models.Entities.Seller;
 
 namespace Amazon_API.Data
 {
@@ -19,6 +20,8 @@ namespace Amazon_API.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
+        public DbSet<SellerProfile> SellerProfiles { get; set; }
+
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {

@@ -34,7 +34,8 @@ import {
   withI18nSupport,
   withIncrementalHydration,
   withNoHttpTransferCache
-} from "./chunk-RXRLLWU5.js";
+
+from "./chunk-RXRLLWU5.js";
 import {
   getDOM
 } from "./chunk-GFFOR7TM.js";
