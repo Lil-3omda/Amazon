@@ -87,26 +87,16 @@ namespace Amazon_API.Controllers
         public async Task<IActionResult> Login(LoginDto dto)
         {
             var user = await userManager.FindByEmailAsync(dto.Email);
-            if (user == null)
-                return Unauthorized("Invalid email or password.");
+            if (user == null) return Unauthorized("Invalid email or password");
 
             var result = await signInManager.CheckPasswordSignInAsync(user, dto.Password, false);
-            if (!result.Succeeded)
-                return Unauthorized("Invalid email or password.");
-
-            var token = tokenService.CreateToken(user);
+            if (!result.Succeeded) return Unauthorized("Invalid email or password");
 
             return Ok(new
             {
-                token,
-                expires = DateTime.UtcNow.AddHours(240),
-                user = new
-                {
-                    user.Id,
-                    user.FullName,
-                    user.Email,
-                    user.ProfileImageUrl
-                }
+                token = tokenService.CreateToken(user),
+                email = user.Email,
+                fullName = user.FullName,
             });
         }
     }
