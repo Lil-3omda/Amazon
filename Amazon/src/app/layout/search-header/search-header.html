@@ -1,0 +1,73 @@
+<!-- components/search-header/search-header.component.html -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3 py-2">
+  <!-- Amazon Logo -->
+  <a class="navbar-brand me-2" href="#">
+  <img src="https://pngimg.com/uploads/amazon/amazon_PNG11.png" width="100" alt="Amazon Logo" />
+</a>
+
+
+  <!-- Deliver to -->
+  <div class="text-white me-3 d-none d-md-block ms-2">
+    <small class="">Deliver to</small><br />
+    <i class="bi bi-geo-alt-fill text-white"></i> Egypt
+  </div>
+
+  <!-- Search bar -->
+  <form class="d-flex flex-grow-1 ms-3" style="max-width: 700px ">
+    <select class="form-select w-auto rounded-0 rounded-start">
+      <option>All</option>
+      <option>Electronics</option>
+      <option>Fashion</option>
+    </select>
+    <input type="text" class="form-control rounded-0" placeholder="Search Amazon..." />
+    <button class="btn btn-warning rounded-0 rounded-end">
+      <i class="bi bi-search"></i>
+    </button>
+  </form>
+
+  <!-- Language -->
+  <div class="text-white ms-3 d-none d-md-block">
+    <img src="https://flagcdn.com/w40/eg.png" width="20" /> EN
+  </div>
+
+  <!-- Account -->
+  <!-- Account & Lists Dropdown -->
+<div class="dropdown d-none d-lg-block ms-4">
+  <a
+    class="text-white text-decoration-none dropdown-toggle"
+    href="#"
+    role="button"
+    id="accountDropdown"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    <small class="text-white">Hello, sign in</small><br />
+    <span class="fw-bold">Account & Lists</span>
+  </a>
+
+  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="accountDropdown">
+    <li><a class="dropdown-item" routerLink="/login">Sign In</a></li>
+    <li><a class="dropdown-item" routerLink="/register">Create Account</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Your Orders</a></li>
+    <li><a class="dropdown-item" href="#">Your Wish List</a></li>
+    <li><a class="dropdown-item" href="#">Your Account</a></li>
+  </ul>
+</div>
+
+
+  <!-- Orders -->
+  <div class="text-white me-3 d-none d-md-block ms-5">
+   
+   <a class="text-white text-decoration-none" href="">Orders</a>
+  </div>
+
+  <!-- Cart -->
+  <div class="text-white position-relative ms-5">
+    <i class="bi bi-cart3 fs-4"></i>
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+    <div class="d-none d-md-block"><b>Cart</b></div>
+  </div>
+</nav>
+
+
