@@ -3,6 +3,8 @@ using Amazon_API.Models.Entities.Reviews;
 using Amazon_API.Models.Entities.Products;
 using Amazon_API.Models.Entities.Ordering;
 using Amazon_API.Models.Entities.Carting;
+using Amazon_API.Models.Entities.Seller;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Amazon_API.Models.Entities.User
 {
@@ -26,6 +28,8 @@ namespace Amazon_API.Models.Entities.User
         public ICollection<Order> Orders { get; set; } = new List<Order>();
         public ICollection<CartItem> CartItems { get; set; } = new List<CartItem>();
         public ICollection<WishListItem> wishListItems { get; set; } = new List<WishListItem>();
+
+        public SellerProfile? SellerProfile { get; set; }
 
 
     }

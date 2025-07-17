@@ -13,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
+using Amazon_API.Models.Entities.Seller;
 
 public class Program
 {
@@ -44,7 +45,9 @@ public class Program
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddScoped<IProductService, ProductService>();
         builder.Services.AddScoped<IEmailService, EmailService>();
-        builder.Services.AddEndpointsApiExplorer();
+
+
+    builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new OpenApiInfo { Title = "Amazon API", Version = "v1" });
