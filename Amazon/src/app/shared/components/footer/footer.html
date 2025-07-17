@@ -1,0 +1,80 @@
+<footer class="amazon-footer">
+
+      <!-- Back to top button -->
+      <div class="back-to-top text-center">
+        <button class="btn btn-link text-white" (click)="scrollToTop()">
+          الرجوع للأعلى
+        </button>
+      </div>
+
+  <!-- Main footer content -->
+  <div class="footer-main">
+    <div class="container">
+
+
+      <!-- Main footer links -->
+      <div class="row footer-links">
+        <div class="col-md-3 col-sm-6 mb-4" *ngFor="let section of footerSections">
+          <h6 class="footer-title">{{ section.title }}</h6>
+          <ul class="list-unstyled">
+            <li *ngFor="let link of section.links">
+              <a href="#" class="footer-link">{{ link }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Country/Language selector -->
+      <div class="footer-country-lang text-center">
+        <div class="d-inline-flex align-items-center">
+          <div class="amazon-logo me-3">
+            <img src="amazon-logo.jpg" alt="Amazon" width="50" height="30">
+          </div>
+          <div class="country-lang-selector">
+            <button class="btn btn-outline-light btn-sm me-2">
+              <img src="egypt-logo.jpg" alt="Egypt" width="20" height="15" class="me-2">
+              مصر
+            </button>
+            <button class="btn btn-outline-light btn-sm">
+              <i class="fas fa-globe me-2"></i>
+              اللغة العربية
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional services section -->
+  <div class="footer-services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 mb-3" *ngFor="let service of additionalSections">
+          <div class="service-item">
+            <h6 class="service-title">{{ service.title }}</h6>
+            <p class="service-subtitle">{{ service.subtitle }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legal links and copyright -->
+  <div class="footer-legal">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="legal-links text-center mb-3">
+            <a href="#" class="legal-link me-3" *ngFor="let link of legalLinks">{{ link }}</a>
+          </div>
+          <div class="copyright text-center">
+            <p class="mb-0">
+              © 1996-2025 محفوظة لشركة Amazon.com أو الشركات التابعة لها<br>
+              حقوق الطبع والنشر
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
