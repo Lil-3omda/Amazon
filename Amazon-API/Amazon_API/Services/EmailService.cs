@@ -20,6 +20,7 @@ namespace Amazon_API.Services
             var host = config["Email:Host"];
             var port = int.Parse(config["Email:Port"]);
 
+
             var client = new SmtpClient(host, port)
             {
                 Credentials = new NetworkCredential(email, password),
