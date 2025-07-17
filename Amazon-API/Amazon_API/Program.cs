@@ -13,6 +13,7 @@ using Microsoft.OpenApi.Models;
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
+using Amazon_API.Repositories.ProductRepository;
 using Amazon_API.Models.Entities.Seller;
 
 public class Program
@@ -40,10 +41,12 @@ public class Program
         builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
-
+        builder.Services.AddScoped<IProductRepository, ProductRepository>();
         builder.Services.AddScoped<ITokenService, TokenService>();
         builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
         builder.Services.AddScoped<IProductService, ProductService>();
+        builder.Services.AddScoped<IProductImageService, ProductImageService>();
+        builder.Services.AddScoped<IReviewService, ReviewService>();
         builder.Services.AddScoped<IEmailService, EmailService>();
         builder.Services.AddScoped<ICartItemService, CartItemService>();
         builder.Services.AddScoped<IWishListItemService, WishListItemService>();
