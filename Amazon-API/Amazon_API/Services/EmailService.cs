@@ -1,6 +1,6 @@
 ﻿using Amazon_API.Services.Interfaces;
-using System.Net;
-using System.Net.Mail;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 namespace Amazon_API.Services
 {
@@ -20,15 +20,24 @@ namespace Amazon_API.Services
             var host = config["Email:Host"];
             var port = int.Parse(config["Email:Port"]);
 
+            var mimeMessage = new MimeMessage();
+            mimeMessage.From.Add(new MailboxAddress("Amazon App", email));
+            mimeMessage.To.Add(MailboxAddress.Parse(toEmail));
+            mimeMessage.Subject = subject;
+            mimeMessage.Body = new TextPart("plain") { Text = message };
 
-            var client = new SmtpClient(host, port)
+            using var smtp = new SmtpClient();
+            try
             {
-                Credentials = new NetworkCredential(email, password),
-                EnableSsl = true
-            };
-
-            var mail = new MailMessage(email, toEmail, subject, message);
-            await client.SendMailAsync(mail);
+                await smtp.ConnectAsync(host, port, MailKit.Security.SecureSocketOptions.StartTls);
+                await smtp.AuthenticateAsync(email, password);
+                await smtp.SendAsync(mimeMessage);
+                await smtp.DisconnectAsync(true);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to send email: {ex.Message}", ex);
+            }
         }
     }
 }

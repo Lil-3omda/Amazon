@@ -75,9 +75,12 @@ public class Program
         });
         builder.Services.AddCors(options =>
         {
-            options.AddPolicy("AllowAll", policy =>
+            options.AddPolicy("AllowAngularApp", policy =>
             {
-                policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                policy.WithOrigins("http://localhost:4200") 
+                      .AllowAnyHeader()
+                      .AllowAnyMethod()
+                      .AllowCredentials(); 
             });
         });
 
@@ -106,7 +109,7 @@ public class Program
         }
 
         app.UseHttpsRedirection();
-        app.UseCors("AllowAll");
+        app.UseCors("AllowAngularApp");
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
