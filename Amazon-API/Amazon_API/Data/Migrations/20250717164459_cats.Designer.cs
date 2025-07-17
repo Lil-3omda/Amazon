@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Amazon_API.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250717163739_cats")]
+    [Migration("20250717164459_cats")]
     partial class cats
     {
         /// <inheritdoc />
@@ -137,6 +137,9 @@ namespace Amazon_API.Data.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
+                    b.Property<string>("TrackingId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -236,7 +239,7 @@ namespace Amazon_API.Data.Migrations
                     b.Property<string>("ImageUrl")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -708,8 +711,7 @@ namespace Amazon_API.Data.Migrations
                     b.HasOne("Amazon_API.Models.Entities.Products.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.NoAction);
 
                     b.Navigation("Product");
                 });
