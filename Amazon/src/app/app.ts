@@ -3,10 +3,14 @@ import { RouterOutlet } from '@angular/router';
 import { SearchHeader } from './layout/search-header/search-header';
 import { Navbar } from './layout/navbar/navbar';
 import { ProductCard } from './layout/product-card/product-card';
+import { Footer } from './shared/components/footer/footer';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,SearchHeader,Navbar,ProductCard],
+@Component({
+  selector: 'app-root',
+  imports: [Footer,CommonModule, RouterOutlet,SearchHeader,Navbar,ProductCard],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
