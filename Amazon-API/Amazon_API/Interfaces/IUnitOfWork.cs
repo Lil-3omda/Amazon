@@ -6,6 +6,7 @@ namespace Amazon_API.Interfaces
     {
         ICartItemRepository CartItems { get; }
         IWishListItemRepository WishListItems { get; }
+        IOrderRepository Orders { get; }
         Task<int> SaveAsync();
     }
 }

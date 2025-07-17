@@ -2,20 +2,11 @@
 {
     public class OrderResponseDto
     {
-        public int OrderId { get; set; }
+        public int Id { get; set; }
+        public string TrackingId { get; set; } = string.Empty;
         public DateTime OrderDate { get; set; }
-        public string Status { get; set; }
-
+        public string Status { get; set; } = string.Empty;
         public decimal TotalPrice { get; set; }
-
-        public List<OrderItemResponseDto> Items { get; set; }
-    }
-
-    public class OrderItemResponseDto
-    {
-        public int ProductId { get; set; }
-        public string ProductTitle { get; set; }
-        public decimal UnitPrice { get; set; }
-        public int Quantity { get; set; }
+        public List<OrderItemDto> OrderItems { get; set; } = new();
     }
 }
